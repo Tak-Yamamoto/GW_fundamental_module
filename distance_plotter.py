@@ -25,7 +25,7 @@ for Tobs in Tlist:
 plt.xlabel('chirp mass[Msun]')
 plt.ylabel('detectable distance [Mpc]')
 plt.legend()
-plt.show()
+plt.savefig('figure/detectable_distance.png')
 
 
 

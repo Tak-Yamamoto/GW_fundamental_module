@@ -8,6 +8,11 @@ c = const.c.cgs.value
 Msun = const.M_sun.cgs.value
 Mpc = 3.08568e+24
 
+'''
+The binary is assumed to merges within the observation time.
+The waveform is obtained by PN and stationary phase approximation.
+'''
+
 def get_integral(freq, psd, fmax):
 
     psd = psd[freq<fmax]

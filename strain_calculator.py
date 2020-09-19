@@ -1,5 +1,6 @@
 import numpy as np
 from astropy import constants as const
+import matplotlib.pyplot as plt
 import sys
 
 G = const.G.cgs.value
@@ -38,13 +39,23 @@ def detectable_distance(M, f, SNRth, Tobs):
 
 
 if __name__ == '__main__':
-
+    
+    """
     D = float(sys.argv[1])
     M = float(sys.argv[2])
     f = float(sys.argv[3])
-    print("Distance: {}[Mpc]".format(D))
-    print("Mass: {}[Msun]".format(M))
-    print("Frequency: {}[Hz]".format(f))
+    """
+
+    D = 1e-3
+    f = 300.0
+
+    Mlist = np.linspace(1.0e-7, 1e-4, 1000)
+    strainlist = []
+    for M in Mlist:
+        strainlist.append(strain(D, M, f))
+
+    plt.figure()
+    plt.loglog(Mlist, strainlist)
+    plt.show()
 
 
-    print("Strain: {}".format(strain(D, M, f)))

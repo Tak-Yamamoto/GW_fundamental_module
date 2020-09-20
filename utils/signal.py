@@ -1,23 +1,6 @@
 import numpy as np
 import sys
 
-TSYGWModule_WindowList = ['tukey']
-
-def get_windowedstrain(strain, windowtype, **params):
-
-    """
-    Parameters
-    ---------------------------------------------
-    strain: numpy.ndarray
-        A time-domain (real-value) signal to be windowed.
-    windowtype: string
-        Specify which window we use.
-    params: dict
-        Parameters charachterizing a window function.
-    """
-
-    
-
 
 def get_whitenedstrain(strain, dt, psd):
     """

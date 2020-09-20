@@ -3,6 +3,7 @@ parameterconversion.py
 """
 
 import numpy as np
+import sys
 
 
 def ChirpMass_MassRatio_To_ComponentMasses(Mc, eta):
@@ -21,9 +22,6 @@ def ChirpMass_MassRatio_To_ComponentMasses(Mc, eta):
     m2: float or numpy.ndarray
         Smaller mass
     """
-
-    if type(Mc)!=type(eta):
-        sys.exit(f"Error: Mc and eta have different types, {type(Mc)} and {type(eta)}")
 
     if isinstance(Mc, np.ndarray) and isinstance(eta, np.ndarray):
         if Mc.shape != eta.shape:
@@ -51,8 +49,6 @@ def ComponentMasses_To_ChirpMass_MassRatio(m1, m2):
         Mass ratio(s) defined as eta=m1/m2 (m1>m2).
     """
 
-    if type(m1)!=type(m2):
-        sys.exit(f"Error: m1 and m2 have different types, {type(m1)} and {type(m2)}")
 
     if isinstance(m1, np.ndarray) and isinstance(m2, np.ndarray):
         if m1.shape != m2.shape:

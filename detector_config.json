@@ -1,0 +1,21 @@
+{
+
+    "LIGO Hanford":{
+        "lambda": 46.45,
+        "longitude": 119.41,
+        "gamma": 171.8
+    },
+
+    "LIGO Livingston":{
+        "lambda": 30.56,
+        "longitude": 90.77,
+        "gamma": 243.0
+    },
+
+    "Virgo":{
+        "lambda": 43.63,
+        "longitude": -10.5,
+        "gamma": 116.5
+    }
+
+}
